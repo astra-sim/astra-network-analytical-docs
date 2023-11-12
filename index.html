@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Analytical Network Backend &mdash; Analytical Network 2.0 documentation</title>
+  <title>Analytical Network Simulator &mdash; Analytical Network 2.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -18,7 +18,8 @@
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Installation" href="installation/installation.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -43,11 +44,12 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <!-- Local TOC -->
-              <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">Analytical Network Backend</a></li>
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="installation/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input-format/input-format.html">Input Format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq/faq.html">Frequently Asked Questions</a></li>
 </ul>
-</div>
+
         </div>
       </div>
     </nav>
@@ -62,7 +64,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Analytical Network Backend</li>
+      <li class="breadcrumb-item active">Analytical Network Simulator</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/index.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -72,18 +74,62 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="analytical-network-backend">
-<h1>Analytical Network Backend<a class="headerlink" href="#analytical-network-backend" title="Link to this heading"></a></h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The documentation for the Analytical Network Backend (for ASTRA-sim) is currently under active development. Please stay tuned!</p>
+  <section id="analytical-network-simulator">
+<h1>Analytical Network Simulator<a class="headerlink" href="#analytical-network-simulator" title="Link to this heading"></a></h1>
+<p>Analytical network simulator models communications over multi-dimensional topologies through analytical equations. Currently, two variations of analytical network simulation are supported.</p>
+<ul class="simple">
+<li><p>congestion_unaware analytical network simulator</p></li>
+<li><p>congestion_aware analytical network simulator</p></li>
+</ul>
+<p>This simulator is developed as a part of the ASTRA-sim project, thereby the analytical network simulator can naturally be used as the network modeling backend of the ASTRA-sim simulator. Please refer to <a class="reference external" href="https://astra-sim.github.io/astra-sim-docs/index.html">this page</a> for detailed documentation of the ASTRA-sim.</p>
+<p>For more information of the analytical network modeling, please refer to <a class="reference external" href="https://arxiv.org/abs/2303.14006">this paper</a>.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation/installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation/install-dependencies.html">Install Dependencies</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation/install-dependencies.html#macos">macOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation/install-dependencies.html#debian-based-linux">Debian-based Linux</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation/clone-repository.html">Clone Repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation/compile-analytical-network-simulator.html">Compile Analytical Network Simulator</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation/compile-analytical-network-simulator.html#overivew">Overivew</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation/compile-analytical-network-simulator.html#additional-options">Additional Options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="installation/compile-analytical-network-simulator.html#build-in-debug-mode">Build in Debug Mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation/compile-analytical-network-simulator.html#compilation-target">Compilation Target</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation/run-sample-simulation.html">Run Simulation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation/run-sample-simulation.html#congestion-unaware-simulation">Congestion_Unaware Simulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation/run-sample-simulation.html#congestion-aware-simulation">Congestion_Aware Simulation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="input-format/input-format.html">Input Format</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="input-format/topology.html">Topology</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="input-format/topology.html#basic-network-building-blocks">Basic Network Building Blocks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="input-format/topology.html#multi-dimensional-network-topology">Multi-dimensional Network Topology</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="input-format/npus-count.html">NPUs Count</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input-format/bandwidth.html">Bandwidth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input-format/latency.html">Latency</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="faq/faq.html">Frequently Asked Questions</a></li>
+</ul>
 </div>
 </section>
 
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="installation/installation.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 
