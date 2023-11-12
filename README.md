@@ -1,5 +1,5 @@
 # astra-network-analytical-docs
-Analytical Backend (for ASTRA-sim) Documentation
+Analytical Network Simulator Documentation
 
 | main branch | Status |
 |:---:|:---:|
@@ -25,7 +25,7 @@ $ pip3 install gitpython sphinx sphinx-rtd-theme myst-parser
 The documentation is in Markdown (`.md`) format. Please modify the documentation as desired. `index.md` could be a good entry point.
  <!-- and `running-astra-sim.md` can be a good reference. -->
 
-Note that you might consider updating the document version defined at the beginning of the `conf.py` file. This should match the Analytical Backend version you're documenting.
+Note that you might consider updating the document version defined at the beginning of the `conf.py` file. This should match the Analytical Network Simulator version you're documenting.
 
 
 ## Compile Project
