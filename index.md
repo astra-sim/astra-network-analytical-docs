@@ -10,6 +10,6 @@ For more information of the analytical network modeling, please refer to [this p
 
 :::{toctree}
 installation/installation.md
-inputs/inputs.md
+input-format/input-format.md
 faq/faq.md
 :::
