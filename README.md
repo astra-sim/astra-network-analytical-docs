@@ -1,10 +1,10 @@
 # astra-network-analytical-docs
 Analytical Backend (for ASTRA-sim) Documentation
 
-<!-- | main branch | Status |
+| main branch | Status |
 |:---:|:---:|
-| build | [![build](https://github.com/astra-sim/astra-sim-docs/actions/workflows/check_build_status.yml/badge.svg?branch=main)](https://github.com/astra-sim/astra-sim-docs/actions/workflows/check_build_status.yml) |
-| deploy | [![deploy](https://github.com/astra-sim/astra-sim-docs/actions/workflows/deploy_docs.yml/badge.svg?branch=main)](https://github.com/astra-sim/astra-sim-docs/actions/workflows/deploy_docs.yml) | -->
+| build | [![build](https://github.com/astra-sim/astra-network-analytical-docs/actions/workflows/check_build_status.yml/badge.svg?branch=main)](https://github.com/astra-sim/astra-network-analytical-docs/actions/workflows/check_build_status.yml) |
+| deploy | [![deploy](https://github.com/astra-sim/astra-network-analytical-docs/actions/workflows/deploy_docs.yml/badge.svg?branch=main)](https://github.com/astra-sim/astra-network-analytical-docs/actions/workflows/deploy_docs.yml) |
 
 
 ## Dependencies
