@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Inputs &mdash; Analytical Network 2.0 documentation</title>
+  <title>Input Format &mdash; Analytical Network 2.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -19,7 +19,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Network Input Format" href="network-input-format.html" />
+    <link rel="next" title="Topology" href="topology.html" />
     <link rel="prev" title="Run Simulation" href="../installation/run-sample-simulation.html" /> 
 </head>
 
@@ -47,8 +47,11 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../installation/installation.html">Installation</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Inputs</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="network-input-format.html">Network Input Format</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Input Format</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="topology.html">Topology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="npus-count.html">NPUs Count</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bandwidth.html">Bandwidth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="latency.html">Latency</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../faq/faq.html">Frequently Asked Questions</a></li>
@@ -68,9 +71,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Inputs</li>
+      <li class="breadcrumb-item active">Input Format</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/inputs/inputs.md.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/input-format/input-format.md.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -78,12 +81,33 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="inputs">
-<h1>Inputs<a class="headerlink" href="#inputs" title="Link to this heading"></a></h1>
-<p>TBA</p>
+  <section id="input-format">
+<h1>Input Format<a class="headerlink" href="#input-format" title="Link to this heading"></a></h1>
+<p>The analytical network simulator uses YAML files to define multi-dimensional network characteristics.</p>
+<p>Shown below is a sample <code class="docutils literal notranslate"><span class="pre">.yml</span></code> network input file.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># 3D (Ring_FullyConnected_Switch) topology</span>
+<span class="nt">topology</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">Ring</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">FullyConnected</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">Switch</span><span class="w"> </span><span class="p p-Indicator">]</span>
+
+<span class="c1"># 2 x 8 x 4 = 64 NPUs</span>
+<span class="nt">npus_count</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">2</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">8</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">4</span><span class="w"> </span><span class="p p-Indicator">]</span><span class="w">  </span><span class="c1"># number of NPUs</span>
+
+<span class="c1"># Bandwidth per each dimension</span>
+<span class="nt">bandwidth</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">200.0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">100.0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">50.0</span><span class="w"> </span><span class="p p-Indicator">]</span><span class="w">  </span><span class="c1"># GB/s</span>
+
+<span class="c1"># Latency per each dimension</span>
+<span class="nt">latency</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">50.0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">500.0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">2000.0</span><span class="w"> </span><span class="p p-Indicator">]</span><span class="w">  </span><span class="c1"># ns</span>
+</pre></div>
+</div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="network-input-format.html">Network Input Format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topology.html">Topology</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="topology.html#basic-network-building-blocks">Basic Network Building Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="topology.html#multi-dimensional-network-topology">Multi-dimensional Network Topology</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="npus-count.html">NPUs Count</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bandwidth.html">Bandwidth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="latency.html">Latency</a></li>
 </ul>
 </div>
 </section>
@@ -93,7 +117,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../installation/run-sample-simulation.html" class="btn btn-neutral float-left" title="Run Simulation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="network-input-format.html" class="btn btn-neutral float-right" title="Network Input Format" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="topology.html" class="btn btn-neutral float-right" title="Topology" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

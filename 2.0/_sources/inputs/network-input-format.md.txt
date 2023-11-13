@@ -1,3 +1,0 @@
-# Network Input Format
-
-TBA

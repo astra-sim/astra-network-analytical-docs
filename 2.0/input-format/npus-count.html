@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Install Dependencies &mdash; Analytical Network 2.0 documentation</title>
+  <title>NPUs Count &mdash; Analytical Network 2.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -19,8 +19,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Clone Repository" href="clone-repository.html" />
-    <link rel="prev" title="Installation" href="installation.html" /> 
+    <link rel="next" title="Bandwidth" href="bandwidth.html" />
+    <link rel="prev" title="Topology" href="topology.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,18 +46,14 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="installation.html">Installation</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Install Dependencies</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#macos">macOS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#debian-based-linux">Debian-based Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation/installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="input-format.html">Input Format</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="topology.html">Topology</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">NPUs Count</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bandwidth.html">Bandwidth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="latency.html">Latency</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="clone-repository.html">Clone Repository</a></li>
-<li class="toctree-l2"><a class="reference internal" href="compile-analytical-network-simulator.html">Compile Analytical Network Simulator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="run-sample-simulation.html">Run Simulation</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../input-format/input-format.html">Input Format</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../faq/faq.html">Frequently Asked Questions</a></li>
 </ul>
 
@@ -75,10 +71,10 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="installation.html">Installation</a></li>
-      <li class="breadcrumb-item active">Install Dependencies</li>
+          <li class="breadcrumb-item"><a href="input-format.html">Input Format</a></li>
+      <li class="breadcrumb-item active">NPUs Count</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/installation/install-dependencies.md.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/input-format/npus-count.md.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -86,43 +82,25 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="install-dependencies">
-<h1>Install Dependencies<a class="headerlink" href="#install-dependencies" title="Link to this heading"></a></h1>
-<p>Please install the dependencies required for compiling the analytical network simulator.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>As of now, the analytical network simulator does not support Windows. For Windows machines, we recommend using <a class="reference external" href="https://learn.microsoft.com/en-us/windows/wsl/install">Windows Subsystem for Linux (WSL)</a>.</p>
-</div>
-<section id="macos">
-<h2>macOS<a class="headerlink" href="#macos" title="Link to this heading"></a></h2>
-<p>You can install dependencies through Homebrew.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>If your machine doesn’t have Homebrew installed, you can install it by following <a class="reference external" href="https://brew.sh">this documentation</a>.</p>
-</div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>brew<span class="w"> </span>update
-<span class="gp">$ </span>brew<span class="w"> </span>upgrade
-<span class="gp">$ </span>brew<span class="w"> </span>install<span class="w"> </span>cmake
+  <section id="npus-count">
+<h1>NPUs Count<a class="headerlink" href="#npus-count" title="Link to this heading"></a></h1>
+<p>The <code class="docutils literal notranslate"><span class="pre">npus_count</span></code> field denotes the size (i.e., number of NPUs) of the network.</p>
+<p><img alt="Example network topologies" src="../_images/npus-count-example.svg" /></p>
+<p>The size of of the above example 1–3D topologies can be captured in the <code class="docutils literal notranslate"><span class="pre">.yml</span></code> format as below.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">npus_count</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">5</span><span class="w"> </span><span class="p p-Indicator">]</span><span class="w">  </span><span class="c1"># 5 NPUs</span>
+<span class="nt">npus_count</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">4</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">2</span><span class="w"> </span><span class="p p-Indicator">]</span><span class="w">  </span><span class="c1"># 4 × 2 = 8 NPUs</span>
+<span class="nt">npus_count</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">4</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">2</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">2</span><span class="w"> </span><span class="p p-Indicator">]</span><span class="w">  </span><span class="c1"># 4 × 2 × 2 = 16 NPUs</span>
 </pre></div>
 </div>
-</section>
-<section id="debian-based-linux">
-<h2>Debian-based Linux<a class="headerlink" href="#debian-based-linux" title="Link to this heading"></a></h2>
-<p>For Debian-based Linux distributions (including Ubuntu), you can install dependencies through apt.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sudo<span class="w"> </span>apt<span class="w"> </span>update
-<span class="gp">$ </span>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade
-<span class="gp">$ </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>cmake
-</pre></div>
-</div>
-</section>
+<p>Note that we represent the number of NPUs per dimension in the <code class="docutils literal notranslate"><span class="pre">.yml</span></code> format. Thus, if <code class="docutils literal notranslate"><span class="pre">npus_count:</span> <span class="pre">[</span> <span class="pre">4,</span> <span class="pre">2,</span> <span class="pre">2</span> <span class="pre">]</span></code>, it denotes that the number of total NPUs in the network is 4 × 2  × 2 = 16.</p>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="installation.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="clone-repository.html" class="btn btn-neutral float-right" title="Clone Repository" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="topology.html" class="btn btn-neutral float-left" title="Topology" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="bandwidth.html" class="btn btn-neutral float-right" title="Bandwidth" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

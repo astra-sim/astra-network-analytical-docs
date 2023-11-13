@@ -50,7 +50,7 @@
 <li class="toctree-l2"><a class="reference internal" href="install-dependencies.html">Install Dependencies</a></li>
 <li class="toctree-l2"><a class="reference internal" href="clone-repository.html">Clone Repository</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Compile Analytical Network Simulator</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#overivew">Overivew</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#additional-options">Additional Options</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#build-in-debug-mode">Build in Debug Mode</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#compilation-target">Compilation Target</a></li>
@@ -61,7 +61,7 @@
 <li class="toctree-l2"><a class="reference internal" href="run-sample-simulation.html">Run Simulation</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../inputs/inputs.html">Inputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../input-format/input-format.html">Input Format</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../faq/faq.html">Frequently Asked Questions</a></li>
 </ul>
 
@@ -94,11 +94,11 @@
 <h1>Compile Analytical Network Simulator<a class="headerlink" href="#compile-analytical-network-simulator" title="Link to this heading"></a></h1>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>If any of the below step fails, please make sure you have properly installed all required dependencies.</p>
+<p>If any of the below steps fail, please make sure you have properly installed all required dependencies.</p>
 </div>
-<section id="overivew">
-<h2>Overivew<a class="headerlink" href="#overivew" title="Link to this heading"></a></h2>
-<p>You can compile analytical network simulator as a standalone binary through CMake.</p>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>You can compile the analytical network simulator as a standalone binary through CMake.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="gp">$ </span>mkdir<span class="w"> </span>build
 <span class="linenos">2</span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>build
 <span class="linenos">3</span><span class="gp">$ </span>cmake<span class="w"> </span>..
@@ -117,7 +117,7 @@
 </section>
 <section id="compilation-target">
 <h3>Compilation Target<a class="headerlink" href="#compilation-target" title="Link to this heading"></a></h3>
-<p>If you want to compile a specific analytical network simulator, you can pass <code class="docutils literal notranslate"><span class="pre">-DBUILDTARGET=&lt;target&gt;</span></code> option at line 3 when using CMake. Currently, target could be <code class="docutils literal notranslate"><span class="pre">congestion_unaware</span></code> or <code class="docutils literal notranslate"><span class="pre">congestion_aware</span></code>. Default option is <code class="docutils literal notranslate"><span class="pre">all</span></code>.</p>
+<p>If you want to compile a specific analytical network simulator, you can pass the <code class="docutils literal notranslate"><span class="pre">-DBUILDTARGET=&lt;target&gt;</span></code> option at line 3 when using CMake. Currently, the target could be <code class="docutils literal notranslate"><span class="pre">congestion_unaware</span></code> or <code class="docutils literal notranslate"><span class="pre">congestion_aware</span></code>. The default option is <code class="docutils literal notranslate"><span class="pre">all</span></code>.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="linenos">3</span><span class="gp">$ </span>cmake<span class="w"> </span>..<span class="w"> </span>-DBUILDTARGET<span class="o">=</span>congestion_unaware
 </pre></div>
 </div>

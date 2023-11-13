@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Install Dependencies &mdash; Analytical Network 2.0 documentation</title>
+  <title>Topology &mdash; Analytical Network 2.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -19,8 +19,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Clone Repository" href="clone-repository.html" />
-    <link rel="prev" title="Installation" href="installation.html" /> 
+    <link rel="next" title="NPUs Count" href="npus-count.html" />
+    <link rel="prev" title="Input Format" href="input-format.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,18 +46,18 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="installation.html">Installation</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Install Dependencies</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#macos">macOS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#debian-based-linux">Debian-based Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation/installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="input-format.html">Input Format</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Topology</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#basic-network-building-blocks">Basic Network Building Blocks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#multi-dimensional-network-topology">Multi-dimensional Network Topology</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="clone-repository.html">Clone Repository</a></li>
-<li class="toctree-l2"><a class="reference internal" href="compile-analytical-network-simulator.html">Compile Analytical Network Simulator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="run-sample-simulation.html">Run Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="npus-count.html">NPUs Count</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bandwidth.html">Bandwidth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="latency.html">Latency</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../input-format/input-format.html">Input Format</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../faq/faq.html">Frequently Asked Questions</a></li>
 </ul>
 
@@ -75,10 +75,10 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="installation.html">Installation</a></li>
-      <li class="breadcrumb-item active">Install Dependencies</li>
+          <li class="breadcrumb-item"><a href="input-format.html">Input Format</a></li>
+      <li class="breadcrumb-item active">Topology</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/installation/install-dependencies.md.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/input-format/topology.md.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -86,32 +86,32 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="install-dependencies">
-<h1>Install Dependencies<a class="headerlink" href="#install-dependencies" title="Link to this heading"></a></h1>
-<p>Please install the dependencies required for compiling the analytical network simulator.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>As of now, the analytical network simulator does not support Windows. For Windows machines, we recommend using <a class="reference external" href="https://learn.microsoft.com/en-us/windows/wsl/install">Windows Subsystem for Linux (WSL)</a>.</p>
-</div>
-<section id="macos">
-<h2>macOS<a class="headerlink" href="#macos" title="Link to this heading"></a></h2>
-<p>You can install dependencies through Homebrew.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>If your machine doesn’t have Homebrew installed, you can install it by following <a class="reference external" href="https://brew.sh">this documentation</a>.</p>
-</div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>brew<span class="w"> </span>update
-<span class="gp">$ </span>brew<span class="w"> </span>upgrade
-<span class="gp">$ </span>brew<span class="w"> </span>install<span class="w"> </span>cmake
+  <section id="topology">
+<h1>Topology<a class="headerlink" href="#topology" title="Link to this heading"></a></h1>
+<p>The <code class="docutils literal notranslate"><span class="pre">topology</span></code> field captures the shape of the network one wants to model or simulate.</p>
+<section id="basic-network-building-blocks">
+<h2>Basic Network Building Blocks<a class="headerlink" href="#basic-network-building-blocks" title="Link to this heading"></a></h2>
+<p>Analytical network simulator supports 3 basic network building blocks.</p>
+<ul class="simple">
+<li><p>Ring</p></li>
+<li><p>FullyConnected</p></li>
+<li><p>Switch</p></li>
+</ul>
+<p>The below image visualizes the shape of basic network building blocks.</p>
+<p><img alt="Network Building Blocks" src="../_images/network-building-blocks.svg" /></p>
+<p>Below is an example of 1D Switch topology.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">topology</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">Switch</span><span class="w"> </span><span class="p p-Indicator">]</span>
 </pre></div>
 </div>
 </section>
-<section id="debian-based-linux">
-<h2>Debian-based Linux<a class="headerlink" href="#debian-based-linux" title="Link to this heading"></a></h2>
-<p>For Debian-based Linux distributions (including Ubuntu), you can install dependencies through apt.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sudo<span class="w"> </span>apt<span class="w"> </span>update
-<span class="gp">$ </span>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade
-<span class="gp">$ </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>cmake
+<section id="multi-dimensional-network-topology">
+<h2>Multi-dimensional Network Topology<a class="headerlink" href="#multi-dimensional-network-topology" title="Link to this heading"></a></h2>
+<p>By stacking up multiple network building blocks, one can also represent multi-dimensional network topologies.</p>
+<p>The below image depicts sample 2D and 3D topologies.</p>
+<p><img alt="Multi-dimensional Network Samples" src="../_images/multidim-network-example.svg" /></p>
+<p>The above samples can be captured as below in the <code class="docutils literal notranslate"><span class="pre">.yml</span></code> input format.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">topology</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">Ring</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">Switch</span><span class="w"> </span><span class="p p-Indicator">]</span><span class="w">  </span><span class="c1"># 2D topology</span>
+<span class="nt">topology</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">Ring</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">Ring</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">Ring</span><span class="w"> </span><span class="p p-Indicator">]</span><span class="w">  </span><span class="c1"># 3D topology</span>
 </pre></div>
 </div>
 </section>
@@ -121,8 +121,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="installation.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="clone-repository.html" class="btn btn-neutral float-right" title="Clone Repository" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="input-format.html" class="btn btn-neutral float-left" title="Input Format" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="npus-count.html" class="btn btn-neutral float-right" title="NPUs Count" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

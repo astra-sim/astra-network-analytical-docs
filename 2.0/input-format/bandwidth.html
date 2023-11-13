@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Network Input Format &mdash; Analytical Network 2.0 documentation</title>
+  <title>Bandwidth &mdash; Analytical Network 2.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -19,8 +19,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Frequently Asked Questions" href="../faq/faq.html" />
-    <link rel="prev" title="Inputs" href="inputs.html" /> 
+    <link rel="next" title="Latency" href="latency.html" />
+    <link rel="prev" title="NPUs Count" href="npus-count.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -47,8 +47,11 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../installation/installation.html">Installation</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="inputs.html">Inputs</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Network Input Format</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="input-format.html">Input Format</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="topology.html">Topology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="npus-count.html">NPUs Count</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Bandwidth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="latency.html">Latency</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../faq/faq.html">Frequently Asked Questions</a></li>
@@ -68,10 +71,10 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="inputs.html">Inputs</a></li>
-      <li class="breadcrumb-item active">Network Input Format</li>
+          <li class="breadcrumb-item"><a href="input-format.html">Input Format</a></li>
+      <li class="breadcrumb-item active">Bandwidth</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/inputs/network-input-format.md.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/input-format/bandwidth.md.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -79,17 +82,30 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="network-input-format">
-<h1>Network Input Format<a class="headerlink" href="#network-input-format" title="Link to this heading"></a></h1>
-<p>TBA</p>
+  <section id="bandwidth">
+<h1>Bandwidth<a class="headerlink" href="#bandwidth" title="Link to this heading"></a></h1>
+<p>The <code class="docutils literal notranslate"><span class="pre">bandwidth</span></code> field defines the bandwidth of each (uni-directional) link in GB/s.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The simulator deems 1 GB as 2^30 B and 1 s as 10^9 ns.</p>
+</div>
+<p><img alt="Example network bandwidth configuration" src="../_images/example-bandwidth.svg" /></p>
+<p>In the first example above, we have a bi-directional link, where each uni-directional link bandwidth is 50 GB/s. This can be captured in the <code class="docutils literal notranslate"><span class="pre">.yml</span></code> representation as below.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">bandwidth</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">50.0</span><span class="w"> </span><span class="p p-Indicator">]</span><span class="w">  </span><span class="c1"># GB/s</span>
+</pre></div>
+</div>
+<p>In the second example, a 2D topology is shown. The 1st dim has a bi-directional link whose uni-directional bandwidth is 120 GB/s. Likely, the 2nd dim leverages bi-directional links, whose uni-directional link bandwidth is 20 GB/s. This can be captured in the <code class="docutils literal notranslate"><span class="pre">.yml</span></code> format as below:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">bandwidth</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">120.0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">20.0</span><span class="w"> </span><span class="p p-Indicator">]</span><span class="w">  </span><span class="c1"># GB/s</span>
+</pre></div>
+</div>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="inputs.html" class="btn btn-neutral float-left" title="Inputs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../faq/faq.html" class="btn btn-neutral float-right" title="Frequently Asked Questions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="npus-count.html" class="btn btn-neutral float-left" title="NPUs Count" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="latency.html" class="btn btn-neutral float-right" title="Latency" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
