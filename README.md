@@ -8,7 +8,7 @@ Analytical Network Simulator Documentation
 
 
 ## Dependencies
-This documentation uses `sphinx` documentation generator and `read the docs` sphinx theme. In order to compile the documentation, please install such dependencies through Python (`pip3`). You may consider creating a virtual environment through `conda`.
+This documentation uses the `sphinx` documentation generator and `read the docs` sphinx theme. In order to compile the documentation, please install such dependencies through Python (`pip3`). You may consider creating a virtual environment through `conda`.
 
 ### Create a Conda Environment (If Desired)
 ```
