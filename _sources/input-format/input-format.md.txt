@@ -1,6 +1,6 @@
 # Input Format
 
-Analytical network simulator uses YAML files to define multi-dimensional network characteristics.
+The analytical network simulator uses YAML files to define multi-dimensional network characteristics.
 
 Shown below is a sample `.yml` network input file.
 :::{code-block} yaml

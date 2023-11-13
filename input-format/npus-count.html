@@ -84,7 +84,7 @@
              
   <section id="npus-count">
 <h1>NPUs Count<a class="headerlink" href="#npus-count" title="Link to this heading"></a></h1>
-<p><code class="docutils literal notranslate"><span class="pre">npus_count</span></code> field denotes the size (i.e., number of NPUs) of the network.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">npus_count</span></code> field denotes the size (i.e., number of NPUs) of the network.</p>
 <p><img alt="Example network topologies" src="../_images/npus-count-example.svg" /></p>
 <p>The size of of the above example 1–3D topologies can be captured in the <code class="docutils literal notranslate"><span class="pre">.yml</span></code> format as below.</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">npus_count</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">5</span><span class="w"> </span><span class="p p-Indicator">]</span><span class="w">  </span><span class="c1"># 5 NPUs</span>
@@ -92,7 +92,7 @@
 <span class="nt">npus_count</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">4</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">2</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">2</span><span class="w"> </span><span class="p p-Indicator">]</span><span class="w">  </span><span class="c1"># 4 × 2 × 2 = 16 NPUs</span>
 </pre></div>
 </div>
-<p>Note that we represent the number of NPUs per each dimension in the <code class="docutils literal notranslate"><span class="pre">.yml</span></code> format. Thus, if <code class="docutils literal notranslate"><span class="pre">npus_count:</span> <span class="pre">[</span> <span class="pre">4,</span> <span class="pre">2,</span> <span class="pre">2</span> <span class="pre">]</span></code>, it denotes that the number of total NPUs in the network is 4 × 2  × 2 = 16.</p>
+<p>Note that we represent the number of NPUs per dimension in the <code class="docutils literal notranslate"><span class="pre">.yml</span></code> format. Thus, if <code class="docutils literal notranslate"><span class="pre">npus_count:</span> <span class="pre">[</span> <span class="pre">4,</span> <span class="pre">2,</span> <span class="pre">2</span> <span class="pre">]</span></code>, it denotes that the number of total NPUs in the network is 4 × 2  × 2 = 16.</p>
 </section>
 
 

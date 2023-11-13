@@ -88,7 +88,7 @@
              
   <section id="topology">
 <h1>Topology<a class="headerlink" href="#topology" title="Link to this heading"></a></h1>
-<p><code class="docutils literal notranslate"><span class="pre">topology</span></code> field captures the shape of the network one wants to model or simulate.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">topology</span></code> field captures the shape of the network one wants to model or simulate.</p>
 <section id="basic-network-building-blocks">
 <h2>Basic Network Building Blocks<a class="headerlink" href="#basic-network-building-blocks" title="Link to this heading"></a></h2>
 <p>Analytical network simulator supports 3 basic network building blocks.</p>
@@ -97,9 +97,9 @@
 <li><p>FullyConnected</p></li>
 <li><p>Switch</p></li>
 </ul>
-<p>Below image visualizes the shape of basic network building blocks.</p>
+<p>The below image visualizes the shape of basic network building blocks.</p>
 <p><img alt="Network Building Blocks" src="../_images/network-building-blocks.svg" /></p>
-<p>Below is an example 1D Switch topology.</p>
+<p>Below is an example of 1D Switch topology.</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">topology</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">Switch</span><span class="w"> </span><span class="p p-Indicator">]</span>
 </pre></div>
 </div>
@@ -107,9 +107,9 @@
 <section id="multi-dimensional-network-topology">
 <h2>Multi-dimensional Network Topology<a class="headerlink" href="#multi-dimensional-network-topology" title="Link to this heading"></a></h2>
 <p>By stacking up multiple network building blocks, one can also represent multi-dimensional network topologies.</p>
-<p>Below image visualizes sample 2D and 3D topologies.</p>
+<p>The below image depicts sample 2D and 3D topologies.</p>
 <p><img alt="Multi-dimensional Network Samples" src="../_images/multidim-network-example.svg" /></p>
-<p>Above samples can be captured as below in the <code class="docutils literal notranslate"><span class="pre">.yml</span></code> input format.</p>
+<p>The above samples can be captured as below in the <code class="docutils literal notranslate"><span class="pre">.yml</span></code> input format.</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">topology</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">Ring</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">Switch</span><span class="w"> </span><span class="p p-Indicator">]</span><span class="w">  </span><span class="c1"># 2D topology</span>
 <span class="nt">topology</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">Ring</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">Ring</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">Ring</span><span class="w"> </span><span class="p p-Indicator">]</span><span class="w">  </span><span class="c1"># 3D topology</span>
 </pre></div>

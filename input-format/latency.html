@@ -84,7 +84,7 @@
              
   <section id="latency">
 <h1>Latency<a class="headerlink" href="#latency" title="Link to this heading"></a></h1>
-<p><code class="docutils literal notranslate"><span class="pre">latency</span></code> field defines the latency of each (uni-directional) link in ns.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">latency</span></code> field defines the latency of each (uni-directional) link in ns.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The simulator deems 1 s as 10^9 ns.</p>
@@ -94,7 +94,7 @@
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">latency</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">10.0</span><span class="w"> </span><span class="p p-Indicator">]</span><span class="w">  </span><span class="c1"># ns</span>
 </pre></div>
 </div>
-<p>In the second example, a 2D topology is shown. The 1st dim has a bi-directinal link whose uni-directional latency is 200 ns. Likely, the 2nd dim leverages bi-directional links, whose uni-directional link latency is 1600 ns. This can be captured in the <code class="docutils literal notranslate"><span class="pre">.yml</span></code> format as below:</p>
+<p>In the second example, a 2D topology is shown. The 1st dim has a bi-directional link whose uni-directional latency is 200 ns. Likely, the 2nd dim leverages bi-directional links, whose uni-directional link latency is 1600 ns. This can be captured in the <code class="docutils literal notranslate"><span class="pre">.yml</span></code> format as below:</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">latency</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">200.0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1600.0</span><span class="w"> </span><span class="p p-Indicator">]</span><span class="w">  </span><span class="c1"># ns</span>
 </pre></div>
 </div>

@@ -1,5 +1,5 @@
 # Frequently Asked Questions
 
 :::{note}
-This page is under construction. Please stay tuned!
+This page is currently under construction. Please stay tuned for updates!
 :::
