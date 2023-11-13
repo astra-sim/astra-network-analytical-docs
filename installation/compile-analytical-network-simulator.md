@@ -1,11 +1,11 @@
 # Compile Analytical Network Simulator
 
 :::{warning}
-If any of the below step fails, please make sure you have properly installed all required dependencies.
+If any of the below steps fail, please make sure you have properly installed all required dependencies.
 :::
 
-## Overivew
-You can compile analytical network simulator as a standalone binary through CMake.
+## Overview
+You can compile the analytical network simulator as a standalone binary through CMake.
 :::{code-block} console
 :lineno-start: 1
 $ mkdir build
@@ -24,7 +24,7 @@ $ cmake --build . --config=Debug -j$(nproc)
 :::
 
 ### Compilation Target
-If you want to compile a specific analytical network simulator, you can pass `-DBUILDTARGET=<target>` option at line 3 when using CMake. Currently, target could be `congestion_unaware` or `congestion_aware`. Default option is `all`.
+If you want to compile a specific analytical network simulator, you can pass the `-DBUILDTARGET=<target>` option at line 3 when using CMake. Currently, the target could be `congestion_unaware` or `congestion_aware`. The default option is `all`.
 :::{code-block} console
 :lineno-start: 3
 $ cmake .. -DBUILDTARGET=congestion_unaware
